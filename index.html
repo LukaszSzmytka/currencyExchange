@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <script defer src="js/script.js"></script>
+    <title>CurrencyExchange</title>
+  </head>
+  <body class="body">
+    <form class="form js-form">
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Kantor wymiany walut</legend>
+        <p>
+          <label class="form__label" for="quantity">Podaj kwotę* :</label>
+          <input
+            class="form__field js-amount"
+            id="amount"
+            name="amount"
+            type="number"
+            required
+            step="0.01"
+            min="0.01"
+          />
+          PLN
+        </p>
+        <p>
+          <label class="form__label" for="currency">Wybierz walutę :</label>
+          <select class="form__field js-currency" id="currency" name="currency">
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+            <option value="CHF">CHF</option>
+            <option value="HRK">HRK</option>
+            <option value="TRY">TRY</option>
+            <option value="GBP">GBP</option>
+          </select>
+        </p>
+        <p>
+          <span class="form__label">Dzisiejszy kurs : </span>
+          <strong class="form__field js-rate">N/A</strong>
+          PLN
+        </p>
+        <p>
+          <span class="form__label">Suma : </span>
+          <strong class="form__field js-sum">N/A</strong>
+          PLN
+        </p>
+      </fieldset>
+      <p>
+        <button class="form__button js-button">Przelicz</button>
+      </p>
+    </form>
+  </body>
+</html>
