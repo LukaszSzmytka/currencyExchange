@@ -1,53 +1,66 @@
-let amountElement = document.querySelector(".js-amount");
-let formElemnt = document.querySelector(".js-form");
-let currencyElement = document.querySelector(".js-currency");
-let rateElement = document.querySelector(".js-rate");
-let sumElement = document.querySelector(".js-sum");
+{
+  const calculateRate = (amount, currency) => {
+    const EUR = 4.7804;
+    const USD = 4.9;
+    const CHF = 4.852;
+    const HRK = 0.6345;
+    const TRY = 0.2635;
+    const GBP = 5.4537;
 
-let EUR = 4.7804;
-let USD = 4.9;
-let CHF = 4.852;
-let HRK = 0.6345;
-let TRY = 0.2635;
-let GBP = 5.4537;
+    switch (currency) {
+      case "EUR":
+        rate = EUR;
+        return amount / EUR;
 
-formElemnt.addEventListener("submit", (event) => {
-  event.preventDefault();
+      case "USD":
+        rate = USD;
+        return amount / USD;
 
-  let amount = amountElement.value;
-  let currency = currencyElement.value;
-  let rate = rateElement.value;
-  let sum = sumElement.value;
+      case "CHF":
+        rate = CHF;
+        return amount / CHF;
 
-  switch (currency) {
-    case "EUR":
-      rate = EUR;
-      break;
+      case "HRK":
+        rate = HRK;
+        return amount / HRK;
 
-    case "USD":
-      rate = USD;
-      break;
+      case "TRY":
+        rate = TRY;
+        return amount / TRY;
 
-    case "CHF":
-      rate = CHF;
-      break;
+      case "GBP":
+        rate = GBP;
+        return amount / GBP;
+    }
+  };
 
-    case "HRK":
-      rate = HRK;
-      break;
+  const updateSumText = (sum, currency) => {
+    const sumElement = document.querySelector(".js-sum");
+    sumElement.innerHTML = `${sum.toFixed(2)} ${currency} `;
+  };
 
-    case "TRY":
-      rate = TRY;
-      break;
+  const onFormSubmit = (event) => {
+    event.preventDefault();
 
-    case "GBP":
-      rate = GBP;
-      break;
-  }
+    const amountElement = document.querySelector(".js-amount");
 
-  sum = amount / rate;
+    const currencyElement = document.querySelector(".js-currency");
+    const rateElement = document.querySelector(".js-rate");
 
-  rateElement.innerText = rate;
+    const amount = amountElement.value;
+    const currency = currencyElement.value;
+    const sum = calculateRate(amount, currency);
 
-  sumElement.innerText = sum.toFixed(2);
-});
+    rateElement.innerText = rate;
+
+    updateSumText(sum, currency);
+  };
+
+  const init = () => {
+    const formElemnt = document.querySelector(".js-form");
+
+    formElemnt.addEventListener("submit", onFormSubmit);
+  };
+
+  init();
+}

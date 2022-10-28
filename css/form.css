@@ -1,7 +1,10 @@
 .form {
+    margin: 30% auto;
     padding: 10px;
     border-radius: 5px;
-    background-color: whitesmoke;
+    background-color: rgb(134, 130, 117);
+    display: flex;
+    flex-direction: column;
 }
 
 .form__fieldset {
