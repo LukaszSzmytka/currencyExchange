@@ -23,45 +23,50 @@
     <meta property="og:image" content="images/currency.png" />
   </head>
   <body class="body">
-    <form class="form js-form">
-      <fieldset class="form__fieldset">
-        <legend class="form__legend">Kantor wymiany walut</legend>
-        <section class="section">
-          <label class="form__label"
-            >Podaj kwotę [PLN]* :
-            <input
-              class="form__field js-amount"
-              name="amount"
-              type="number"
-              required
-              step="0.01"
-              min="0.01"
-            />
+      <form class="form js-form">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Kantor wymiany walut</legend>
+       <p>
+        <label class="form__label">
+          Podaj kwotę [PLN]* :
+        </label>
+        <input
+          class="form__field js-amount"
+          name="amount"
+          type="number"
+          required
+          step="0.01"
+          min="0.01"
+        />
+       </p>
+        <p>
+          <label class="form__label">
+            Wybierz walutę :
           </label>
-        </section>
-        <section class="section">
-          <label class="form__label"
-            >Wybierz walutę :
-            <select class="form__field js-currency" name="currency">
-              <option value="EUR">Euro</option>
-              <option value="USD">Dolar amerykański</option>
-              <option value="CHF">Frank szwajcarski</option>
-              <option value="HRK">Kuna chorwacka</option>
-              <option value="TRY">Lira turecka</option>
-              <option value="GBP">Funt brytyjski</option>
-            </select>
-          </label>
-        </section>
-        <button class="form__button js-button">Przelicz</button>
-        <section class="section">
-          <span class="form__label">Kurs z dnia 2023-01-09 [PLN] : </span>
-          <strong class="form__field js-rate">N/A</strong>
-        </section>
-        <section class="section">
-          <span class="form__label">Suma : </span>
-          <strong class="form__field js-result">N/A</strong>
-        </section>
-      </fieldset>
+          <select class="form__field js-currency" name="currency">
+            <option value="EUR">Euro</option>
+            <option value="USD">Dolar amerykański</option>
+            <option value="CHF">Frank szwajcarski</option>
+            <option value="HRK">Kuna chorwacka</option>
+            <option value="TRY">Lira turecka</option>
+            <option value="GBP">Funt brytyjski</option>
+          </select>
+        </p>
+        <p>
+         <button class="form__button js-button">Przelicz</button>
+        </p>
+        <p>
+         <span class="form__label">
+           Kurs z dnia 2023-01-09 [PLN] :
+         </span>
+         <strong class="form__field js-rate">N/A</strong>
+       </p>
+      <p>
+        <span class="form__label">
+          Suma : 
+        </span>
+        <strong class="form__field js-result">N/A</strong>
+      </p>
     </form>
   </body>
 </html>
