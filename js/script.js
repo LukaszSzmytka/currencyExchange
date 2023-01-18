@@ -28,9 +28,9 @@
     }
   };
 
-  const updateResultText = (result, currency) => {
+  const updateResultText = (amount, result, currency) => {
     const resultElement = document.querySelector(".js-result");
-    resultElement.innerHTML = `${result.toFixed(2)} ${currency} `;
+    resultElement.innerHTML = `${amount.toFixed(2)} PLN = ${result.toFixed(2)} ${currency} `;
   };
 
   const onFormSubmit = (event) => {
@@ -40,14 +40,14 @@
 
     const currencyElement = document.querySelector(".js-currency");
 
-    const amount = amountElement.value;
+    const amount = +amountElement.value;
     const currency = currencyElement.value;
     const result = calculateResult(amount, currency);
     const rateElement = document.querySelector(".js-rate");
 
     rateElement.innerText = (amount / result).toFixed(2);
 
-    updateResultText(result, currency);
+    updateResultText(amount, result, currency);
   };
 
   const init = () => {
