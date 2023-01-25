@@ -30,7 +30,7 @@
 
   const updateResultText = (amount, result, currency) => {
     const resultElement = document.querySelector(".js-result");
-    resultElement.innerHTML = `${amount.toFixed(2)} PLN = ${result.toFixed(2)} ${currency} `;
+    resultElement.innerHTML = `${amount.toFixed(2)} PLN = <strong>${result.toFixed(2)} ${currency}</strong> `;
   };
 
   const onFormSubmit = (event) => {
