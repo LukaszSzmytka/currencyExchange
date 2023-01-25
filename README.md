@@ -1,7 +1,7 @@
 # Hello!!!
 ## This is my simple currency exchange site.
 ---
-[![currency-Exchange.gif](https://i.postimg.cc/CxwM6SQW/currency-Exchange.gif)](https://postimg.cc/8jnV7QDH)
+[![kalkulator.gif](https://i.postimg.cc/ncRDqTT5/kalkulator.gif)](https://postimg.cc/ykRxHmMX)
 
  It will be update during my study of frontend dev.
 ## You can see my work at link below:
@@ -9,5 +9,8 @@ https://lukaszszmytka.github.io/currencyExchange/
 
 ## Technologies and features:
 - HTML
-- CSS, Normalize CSS, BEM, FLEX
+- CSS
+- Normalize CSS
+- BEM
+- FLEX
 - Javascript (EC6+)
