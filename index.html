@@ -26,11 +26,9 @@
     <div class="container">
       <form class="form js-form">
         <h1 class="form__header">Kantor wymiany walut</h1>
-
         <p>
           <label>
-            <div class="form__labelText">Podaj kwotę [PLN]* :</div>
-
+            <span class="form__labelText">Podaj kwotę [PLN]* :</span>
             <input
               class="form__field js-amount"
               name="amount"
@@ -38,13 +36,12 @@
               required
               step="0.01"
               min="0.01"
-            />
+           />
           </label>
         </p>
         <p>
           <label>
-            <div class="form__labelText">Wybierz walutę :</div>
-
+            <span class="form__labelText">Wybierz walutę :</span>
             <select class="form__field js-currency" name="currency">
               <option value="EUR">Euro</option>
               <option value="USD">Dolar amerykański</option>
@@ -55,16 +52,13 @@
             </select>
           </label>
         </p>
-
         <p>
           <label>
-            <div class="form__labelText">Kurs z dnia 2023-01-09 [PLN] :</div>
-            <strong class="form__field js-rate">N/A</strong>
+           <span class="form__labelText">Kurs z dnia 2023-01-09 [PLN] :</span>
+           <strong class="form__field js-rate">N/A</strong>
           </label>
         </p>
-        <p>
-          <button class="form__button js-button">Przelicz</button>
-        </p>
+        <p><button class="form__button js-button">Przelicz</button></p>
         <p class="form__result js-result"></p>
       </form>
     </div>
